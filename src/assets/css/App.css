@@ -74,6 +74,10 @@ ul, li {
     outline: none;
 }
 
+.square.on {
+    color: red;
+}
+
 .kbd-navigation .square:focus {
     background: #ddd;
 }
@@ -92,4 +96,12 @@ ul, li {
 
 .moves-history {
     text-align: center;
+}
+
+.moves-history li {
+    margin-bottom: 10px;
+}
+
+.moves-history li.on button {
+    font-weight: bold;
 }
