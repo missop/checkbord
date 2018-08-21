@@ -63,12 +63,16 @@ class Game extends Component {
                 </li>
             )
         })
-
+        const isLastStep = current.squares.filter((item) => {
+            return item === null
+        });
         let state
         if (winner) {
             state = 'Mr.' + winner + ' ,You Win!'
-        } else {
+        } else if (isLastStep.length) {
             state = 'next player is ' + (this.state.xisNext ? 'X' : 'O');
+        } else {
+            state = 'Game Over!';
         }
         return (
             <div className="game">
